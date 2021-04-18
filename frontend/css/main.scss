@@ -1,5 +1,5 @@
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   background-color: #f2f2f2;
 }
@@ -38,8 +38,6 @@ body {
       }
     }
   }
-
-
 }
 
 // Content
@@ -85,11 +83,15 @@ body {
     }
   }
   .jumbotron::after {
-    content : '';
+    content: "";
     display: block;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to top,rgba(0,0,0,0.9), rgba(0,0,0,0));
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0)
+    );
     position: absolute;
     bottom: 0;
   }
@@ -109,7 +111,6 @@ body {
       h4 {
         font-size: 22px;
       }
-
     }
   }
 }
@@ -139,6 +140,105 @@ footer {
   }
 }
 
+// breadcrumb
+nav {
+  .breadcrumb {
+    background-color: #f2f2f2;
+  }
+}
+
+// Main Content
+.main-content {
+  .left-content {
+    .main-news {
+      .main-image {
+        img {
+          width: 650px;
+          height: 350px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      .main-title {
+        h1 {
+          font-size: 40px;
+          font-weight: 600;
+          color: #181f57;
+        }
+      }
+
+      .main-full-news {
+        p {
+          font-size: 17px;
+          text-align: justify;
+        }
+      }
+    }
+  }
+
+  .right-content,
+  .recomment-news {
+    .card {
+      background-color: #f2f2f2;
+    }
+  }
+
+  .recomment-news {
+    h3 {
+      color: #181f57;
+      font-weight: 600;
+      font-size: 26px;
+    }
+  }
+}
+
+hr {
+  border: 3px solid #181f57;
+}
+
+// Effek Zoom Gambar
+.banner,
+.main-content {
+  .right-content {
+    .news-content {
+      .media {
+        img {
+          -webkit-transition: 0.4s ease;
+          transition: 0.4s ease;
+        }
+      }
+
+      .media {
+        &:hover {
+          img {
+            -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+          }
+        }
+      }
+    }
+  }
+}
+
+.old-news {
+  .card {
+    img {
+      -webkit-transition: 0.4s ease;
+      transition: 0.4s ease;
+      width: 240px;
+    }
+  }
+  .card {
+    &:hover {
+      img {
+        -webkit-transform: scale(1.04);
+        transform: scale(1.04);
+      }
+    }
+  }
+}
+
 @media (max-width: 576px) {
   .old-news {
     .card {
@@ -146,7 +246,8 @@ footer {
         h4 {
           font-size: 18px;
         }
-        p, a {
+        p,
+        a {
           font-size: 14px;
         }
       }
@@ -166,13 +267,13 @@ footer {
       display: none;
     }
   }
-  
+
   .secondary-navbar {
     button {
       background-color: #ffffff;
       color: #ffffff;
     }
-    
+
     .navbar-collapse {
       .navbar-nav {
         .nav-item {
@@ -183,7 +284,7 @@ footer {
       }
     }
   }
-  
+
   .flash-news {
     display: none;
   }
@@ -212,7 +313,8 @@ footer {
         h4 {
           font-size: 20px;
         }
-        p, a {
+        p,
+        a {
           font-size: 14px;
         }
       }
@@ -246,7 +348,7 @@ footer {
         }
       }
     }
-  } 
+  }
 
   .flash-news {
     display: none;
