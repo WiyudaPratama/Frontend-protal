@@ -60,6 +60,10 @@ body {
   text-decoration: none;
 }
 
+.banner .jumbotron a h1:hover {
+  color: #e3d400;
+}
+
 .banner .jumbotron .title-news {
   position: relative;
   z-index: 1;
@@ -91,8 +95,42 @@ body {
   font-size: 20px;
 }
 
+.old-news .card {
+  background-color: #f2f2f2;
+}
+
 .old-news .card .card-body h4 {
   font-size: 22px;
+  margin-top: -14px;
+}
+
+.old-news .card .card-body p {
+  margin: 0px;
+}
+
+.vidio .title h3 {
+  color: #181f57;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.vidio .vidio-frame .vidio-frame-title {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.vidio .vidio-frame .vidio-frame-title h4 {
+  font-size: 20px;
+}
+
+.vidio .btn-load-more {
+  background-color: #bfbfbf;
+  color: #737373;
+}
+
+.vidio .btn-load-more:hover {
+  background-color: #8c8c8c;
+  color: #dedede;
 }
 
 footer {
@@ -153,27 +191,34 @@ hr {
   border: 3px solid #181f57;
 }
 
-.banner .right-content .news-content .media img,
-.main-content .right-content .news-content .media img {
+.banner .news-content .media, .main-content .news-content .media {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner .news-content .kotak img, .main-content .news-content .kotak img {
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
 }
 
-.banner .right-content .news-content .media:hover img,
-.main-content .right-content .news-content .media:hover img {
+.banner .news-content .zoom-effect:hover .kotak img, .main-content .news-content .zoom-effect:hover .kotak img {
   -webkit-transform: scale(1.08);
   transform: scale(1.08);
 }
 
-.old-news .card img {
-  -webkit-transition: 0.4s ease;
-  transition: 0.4s ease;
-  width: 240px;
+.old-news .card, .recomment-news .card {
+  position: relative;
+  overflow: hidden;
 }
 
-.old-news .card:hover img {
-  -webkit-transform: scale(1.04);
-  transform: scale(1.04);
+.old-news .kotak img, .recomment-news .kotak img {
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.old-news .zoom-effect:hover .kotak img, .recomment-news .zoom-effect:hover .kotak img {
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
 }
 
 @media (max-width: 576px) {

@@ -66,6 +66,12 @@ body {
 
     a {
       text-decoration: none;
+
+      h1 {
+        &:hover {
+          color: #e3d400;
+        }
+      }
     }
     .title-news {
       position: relative;
@@ -107,11 +113,48 @@ body {
 
 .old-news {
   .card {
+    background-color: #f2f2f2;
     .card-body {
       h4 {
         font-size: 22px;
+        margin-top: -14px;
+      }
+
+      p {
+        margin: 0px;
       }
     }
+  }
+}
+
+.vidio {
+  .title {
+    h3 {
+      color: #181f57;
+      font-weight: 600;
+      font-size: 28px;
+    }
+  }
+  
+  .vidio-frame {
+    .vidio-frame-title {
+      padding-top: 10px;
+      padding-left: 10px;
+      h4 {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .btn-load-more {
+    background-color: #bfbfbf;
+    color: #737373;
+
+    &:hover {
+      background-color: #8c8c8c;
+      color: #dedede;
+    }
+
   }
 }
 
@@ -198,19 +241,22 @@ hr {
 }
 
 // Effek Zoom Gambar
-.banner,
-.main-content {
-  .right-content {
-    .news-content {
-      .media {
-        img {
-          -webkit-transition: 0.4s ease;
-          transition: 0.4s ease;
-        }
+.banner, .main-content {
+  .news-content {
+    .media {
+      position: relative;
+      overflow: hidden;
+    }
+    .kotak {
+      img {
+        -webkit-transition: 0.4s ease;
+        transition: 0.4s ease;
       }
+    }
 
-      .media {
-        &:hover {
+    .zoom-effect {
+      &:hover {
+        .kotak {
           img {
             -webkit-transform: scale(1.08);
             transform: scale(1.08);
@@ -221,19 +267,26 @@ hr {
   }
 }
 
-.old-news {
+.old-news, .recomment-news {
   .card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .kotak {
     img {
       -webkit-transition: 0.4s ease;
       transition: 0.4s ease;
-      width: 240px;
     }
   }
-  .card {
+
+  .zoom-effect {
     &:hover {
-      img {
-        -webkit-transform: scale(1.04);
-        transform: scale(1.04);
+      .kotak {
+        img {
+          -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+        }
       }
     }
   }
